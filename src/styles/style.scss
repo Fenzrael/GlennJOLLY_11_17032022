@@ -12,6 +12,7 @@ $color-secondary: #f6f6f6;
 }
 
 body {
+  height: 100vh;
   margin: 0;
 }
 
@@ -123,7 +124,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 2rem;
+  margin: 2rem 6rem;
 }
 
 .accordion {
@@ -262,19 +263,23 @@ body {
 }
 
 .location {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__title {
     margin: 0;
     font-size: 36px;
     color: $color-primary;
   }
   &__rental {
+    margin: 0.5rem 0 2rem 0;
     font-size: 18px;
     color: $color-primary;
   }
 }
 
 .block {
-  margin: 6rem 0 0 0;
+  margin: 1rem 0;
   &__tag {
     margin: 0 1rem 0 0;
     padding: 0.5rem 3rem;
@@ -289,8 +294,8 @@ body {
   justify-content: space-between;
   align-items: center;
   &__name {
-    margin: 0 0.6rem 0 0;
-    width: 6rem;
+    margin: 0;
+    width: 5rem;
     font-size: 18px;
     color: $color-primary;
   }
@@ -301,8 +306,51 @@ body {
   }
 }
 
+.containerRating {
+  margin: 0.5rem 0;
+}
 .host {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 769px) {
+  .header {
+    margin: 1.25rem;
+  }
+
+  .banner {
+    margin: 1.25rem;
+  }
+
+  .container {
+    margin: 0 1.25rem;
+    padding: 0;
+  }
+
+  .card {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 25rem;
+    height: auto;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 1rem 0;
+    &__image {
+      object-fit: cover;
+      width: 100%;
+      filter: brightness(0.8);
+    }
+    &__title {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 1rem;
+    }
+  }
 }

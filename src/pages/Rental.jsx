@@ -33,8 +33,10 @@ const Rental = () => {
           <Carousel pictures={currentData.pictures} />
           <div className="information">
             <div className="information__Location location">
-              <TitleRental title={currentData.title} />
-              <LocationRental location={currentData.location} />
+              <div className="location__gps">
+                <TitleRental title={currentData.title} />
+                <LocationRental location={currentData.location} />
+              </div>
               <TagsRental tags={currentData.tags} />
             </div>
             <div className="information__Host host">
