@@ -5,6 +5,11 @@ import Accordion from "../components/Accordion";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import TitleRental from "../components/TitleRental";
+import LocationRental from "../components/LocationRental";
+import HostRental from "../components/HostRental";
+import TagsRental from "../components/TagsRental";
+import Rate from "../components/Rate";
 
 const Rental = () => {
   const [data, setData] = useState([]);
@@ -26,6 +31,20 @@ const Rental = () => {
       {currentData && (
         <>
           <Carousel pictures={currentData.pictures} />
+          <div className="information">
+            <div className="information__Location location">
+              <TitleRental title={currentData.title} />
+              <LocationRental location={currentData.location} />
+              <TagsRental tags={currentData.tags} />
+            </div>
+            <div className="information__Host host">
+              <HostRental
+                name={currentData.host.name}
+                picture={currentData.host.picture}
+              />
+              <Rate className="host__stars" rating={currentData.rating} />
+            </div>
+          </div>
           <div className="rental">
             <Accordion
               title="Description"

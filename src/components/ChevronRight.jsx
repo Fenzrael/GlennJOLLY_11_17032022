@@ -5,7 +5,7 @@ const ChevronRight = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 407.436 407.436"
     stroke="white"
-    stroke-width="20px"
+    strokeWidth="20px"
     fill="white"
     style={{
       enableBackground: "new 0 0 407.436 407.436",

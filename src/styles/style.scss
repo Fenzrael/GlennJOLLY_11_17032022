@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 2rem 0 2rem;
+  margin: 2rem 6rem 0 6rem;
   &__navigation {
     width: 25%;
     font-size: 20px;
@@ -45,7 +45,7 @@ body {
   justify-content: center;
   border-radius: 25px;
   overflow: hidden;
-  margin: 4rem 2rem 0 2rem;
+  margin: 4rem 6rem 0 6rem;
   &__img {
     position: relative;
     object-fit: cover;
@@ -65,7 +65,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 3rem 2rem 2rem 2rem;
+  margin: 3rem 6rem 2rem 6rem;
   padding: 2rem 0;
   background-color: $color-secondary;
   border-radius: 25px;
@@ -208,7 +208,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 2rem;
+  margin: 2rem 6rem;
   &__description {
     width: 36rem;
     margin: 0 1rem;
@@ -233,7 +233,7 @@ body {
   justify-content: center;
   border-radius: 25px;
   overflow: hidden;
-  margin: 2rem;
+  margin: 2rem 6rem;
   &__image {
     max-height: 26rem;
     width: 100%;
@@ -253,4 +253,56 @@ body {
     z-index: 2;
     width: 6rem;
   }
+}
+
+.information {
+  margin: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location {
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    color: $color-primary;
+  }
+  &__rental {
+    font-size: 18px;
+    color: $color-primary;
+  }
+}
+
+.block {
+  margin: 6rem 0 0 0;
+  &__tag {
+    margin: 0 1rem 0 0;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    background-color: $color-primary;
+    color: white;
+  }
+}
+
+.hostRental {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__name {
+    margin: 0 0.6rem 0 0;
+    width: 6rem;
+    font-size: 18px;
+    color: $color-primary;
+  }
+  &__picture {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+}
+
+.host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
