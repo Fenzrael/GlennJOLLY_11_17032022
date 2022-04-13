@@ -14,11 +14,12 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin: 2rem 6rem 0 6rem;
 }
 .header__navigation {
-  width: 25%;
+  width: 14rem;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
@@ -50,6 +51,7 @@ body {
   filter: brightness(0.7);
 }
 .banner__txt {
+  margin: 2rem;
   position: absolute;
   color: white;
   font-size: 2.5rem;
@@ -80,6 +82,7 @@ body {
 .card__image {
   object-fit: cover;
   width: 100%;
+  height: 100%;
   filter: brightness(0.8);
 }
 .card__title {
@@ -131,6 +134,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
   background-color: #ff6060;
   border: none;
   border-radius: 5px;
@@ -190,10 +194,6 @@ body {
   text-decoration-thickness: 3px;
 }
 
-.carousel__chevron {
-  width: 2rem;
-}
-
 .rental {
   display: flex;
   justify-content: space-between;
@@ -217,28 +217,31 @@ body {
 }
 
 .carousel {
+  user-select: none;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+  height: 400px;
   overflow: hidden;
   margin: 2rem 6rem;
 }
 .carousel__image {
-  max-height: 26rem;
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
   filter: brightness(0.8);
 }
 .carousel__left {
+  cursor: pointer;
   position: absolute;
   left: 0;
   z-index: 2;
   width: 6rem;
 }
 .carousel__right {
+  cursor: pointer;
   position: absolute;
   right: 0;
   z-index: 2;
@@ -313,6 +316,9 @@ body {
   .banner {
     margin: 1.25rem;
   }
+  .banner__txt {
+    font-size: 1.5rem;
+  }
 
   .container {
     background-color: white;
@@ -324,23 +330,161 @@ body {
     display: inline-block;
     position: relative;
     width: 100%;
-    height: 20rem;
-    overflow: hidden;
-    border-radius: 25px;
+    height: auto;
+    max-height: 15rem;
     margin: 1rem 0;
   }
-  .card__image {
-    object-fit: cover;
-    width: 100%;
-    filter: brightness(0.8);
-  }
   .card__title {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    color: white;
     font-size: 18px;
     font-weight: bold;
+    margin: 1rem;
+  }
+
+  .carousel {
+    max-height: 250px;
+    margin: 1.25rem;
+  }
+  .carousel__left {
+    width: 3rem;
+  }
+  .carousel__right {
+    width: 3rem;
+  }
+
+  .information {
+    margin: 0 1.25rem;
+  }
+
+  .rental {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1.25rem;
+  }
+  .rental__description {
+    width: 36rem;
+  }
+  .rental__equipments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 36rem;
+  }
+
+  .location__title {
+    font-size: 18px;
+  }
+  .location__rental {
+    font-size: 14px;
+  }
+
+  .block__tag {
+    padding: 0.25rem 1.5rem;
+    border-radius: 10px;
+    background-color: #ff6060;
+    color: white;
+  }
+
+  .hostRental__name {
+    width: 2.25rem;
+    font-size: 14px;
+  }
+  .hostRental__picture {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media screen and (max-width: 542px) {
+  .banner {
+    display: none;
+  }
+  .banner__txt {
+    font-size: 1.5rem;
+  }
+  .banner__img {
+    width: 100%;
+    height: 95px;
+  }
+
+  .homeBanner {
+    display: inline-block;
+    height: 95px;
+    border-radius: 10px;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .host {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .hostRental {
+    width: 35%;
+  }
+  .hostRental__name {
+    width: 2.25rem;
+    font-size: 14px;
+  }
+  .hostRental__picture {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .accordion__section {
+    margin: 0;
+  }
+
+  .accordion {
+    display: block;
+    width: 100%;
+  }
+  .accordion__content {
+    font-size: 12px;
+  }
+
+  .card {
+    margin: 1rem 0;
+  }
+  .card__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  .header {
+    margin: 1rem;
+    justify-content: space-between;
+  }
+  .header__navigation {
+    width: 140px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__logo {
+    margin: 0;
+  }
+
+  .banner__txt {
+    margin: 1rem;
+    font-size: 24px;
+  }
+
+  .rental {
+    margin: 1rem 0;
+  }
+
+  .accordion {
+    max-width: 90%;
     margin: 1rem;
   }
 }

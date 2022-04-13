@@ -18,10 +18,11 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin: 2rem 6rem 0 6rem;
   &__navigation {
-    width: 25%;
+    width: 14rem;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
@@ -53,6 +54,7 @@ body {
     filter: brightness(0.7);
   }
   &__txt {
+    margin: 2rem;
     position: absolute;
     color: white;
     font-size: 2.5rem;
@@ -83,6 +85,7 @@ body {
   &__image {
     object-fit: cover;
     width: 100%;
+    height: 100%;
     filter: brightness(0.8);
   }
   &__title {
@@ -130,10 +133,12 @@ body {
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 2rem;
+
   &__button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
     background-color: $color-primary;
     border: none;
     border-radius: 5px;
@@ -196,12 +201,6 @@ body {
   }
 }
 
-.carousel {
-  &__chevron {
-    width: 2rem;
-  }
-}
-
 .rental {
   display: flex;
   justify-content: space-between;
@@ -225,27 +224,30 @@ body {
 }
 
 .carousel {
+  user-select: none;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+  height: 400px;
   overflow: hidden;
   margin: 2rem 6rem;
   &__image {
-    max-height: 26rem;
     width: 100%;
     object-fit: cover;
     border-radius: 25px;
     filter: brightness(0.8);
   }
   &__left {
+    cursor: pointer;
     position: absolute;
     left: 0;
     z-index: 2;
     width: 6rem;
   }
   &__right {
+    cursor: pointer;
     position: absolute;
     right: 0;
     z-index: 2;
@@ -306,6 +308,7 @@ body {
 .containerRating {
   margin: 0.5rem 0;
 }
+
 .host {
   display: flex;
   flex-direction: column;
@@ -319,6 +322,9 @@ body {
 
   .banner {
     margin: 1.25rem;
+    &__txt {
+      font-size: 1.5rem;
+    }
   }
 
   .container {
@@ -331,23 +337,173 @@ body {
     display: inline-block;
     position: relative;
     width: 100%;
-    height: 20rem;
-    overflow: hidden;
-    border-radius: 25px;
+    height: auto;
+    max-height: 15rem;
     margin: 1rem 0;
-    &__image {
-      object-fit: cover;
-      width: 100%;
-      filter: brightness(0.8);
-    }
     &__title {
-      position: absolute;
-      bottom: 0;
-      z-index: 2;
-      color: white;
       font-size: 18px;
       font-weight: bold;
       margin: 1rem;
+    }
+  }
+
+  .carousel {
+    max-height: 250px;
+    margin: 1.25rem;
+    &__left {
+      width: 3rem;
+    }
+    &__right {
+      width: 3rem;
+    }
+  }
+
+  .information {
+    margin: 0 1.25rem;
+  }
+
+  .rental {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1.25rem;
+    &__description {
+      width: 36rem;
+    }
+    &__equipments {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 36rem;
+    }
+  }
+
+  .location {
+    &__title {
+      font-size: 18px;
+    }
+    &__rental {
+      font-size: 14px;
+    }
+  }
+
+  .block {
+    &__tag {
+      padding: 0.25rem 1.5rem;
+      border-radius: 10px;
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+
+  .hostRental {
+    &__name {
+      width: 2.25rem;
+      font-size: 14px;
+    }
+    &__picture {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .banner {
+    display: none;
+    &__txt {
+      font-size: 1.5rem;
+    }
+    &__img {
+      width: 100%;
+      height: 95px;
+    }
+  }
+
+  .homeBanner {
+    display: inline-block;
+    height: 95px;
+    border-radius: 10px;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .host {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .hostRental {
+    width: 35%;
+    &__name {
+      width: 2.25rem;
+      font-size: 14px;
+    }
+    &__picture {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .accordion__section {
+    margin: 0;
+  }
+  .accordion {
+    display: block;
+    width: 100%;
+
+    &__content {
+      font-size: 12px;
+    }
+  }
+
+  .card {
+    margin: 1rem 0;
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .header {
+    margin: 1rem;
+    justify-content: space-between;
+    &__navigation {
+      width: 140px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo {
+      margin: 0;
+    }
+  }
+
+  .banner {
+    &__txt {
+      margin: 1rem;
+      font-size: 24px;
+    }
+  }
+
+  .rental {
+    margin: 1rem 0;
+  }
+
+  .accordion {
+    max-width: 90%;
+    margin: 1rem;
+    &__content {
     }
   }
 }
