@@ -19,11 +19,11 @@ const Rental = () => {
   useEffect(() => {
     axios.get("./rental.json").then((res) => setData(res.data));
   }, []);
-  console.log(data);
+  /* console.log(data); */
 
-  // Le point d'interrogation est une courte ternaire permettant de voir si les donnees du useEffect sont arrivees si oui cela lance le find sinon ccela attends les donnees
+  // Le point d'interrogation est une comme une courte ternaire permettant de voir si les donnees du useEffect sont arrivees si oui cela lance le find sinon ccela attends les donnees
   const currentData = data?.find((data) => data.id === currentId);
-  console.log(currentData);
+  /* console.log(currentData); */
 
   return (
     <>
